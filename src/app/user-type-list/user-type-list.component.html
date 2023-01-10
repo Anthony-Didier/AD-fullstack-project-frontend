@@ -1,0 +1,37 @@
+<div class="col-md-12 text-center">
+  <a routerLink="/addusertype" class="btn btn-primary">Add an user type</a>
+</div>
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Type user</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let userType of userTypes">
+        <tr>
+          <td>{{ userType.idTypeUser }}</td>
+          <td>{{ userType.typeUser }}</td>
+          <td>
+            <button
+              (click)="updateUserType(userType.idTypeUser)"
+              class="btn btn-success"
+            >
+              Edit
+            </button>
+            <button
+              (click)="deleteUserType(userType.idTypeUser)"
+              class="btn btn-danger"
+              style="margin-left: 10px"
+            >
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

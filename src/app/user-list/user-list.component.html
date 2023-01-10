@@ -1,0 +1,40 @@
+<div class="col-md-12 text-center">
+  <a routerLink="/adduser" class="btn btn-primary">Add an user</a>
+</div>
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Type user</th>
+          <th scope="col">Name</th>
+          <th scope="col">First name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.userType.typeUser }}</td>
+          <td>{{ user.nameUser }}</td>
+          <td>{{ user.firstNameUser }}</td>
+          <td>
+            <a href="mailto:{{ user.emailUser }}">{{ user.emailUser }}</a>
+          </td>
+          <td>
+            <button (click)="updateUser(user.idUser)" class="btn btn-success">
+              Edit
+            </button>
+            <button
+              (click)="deleteUser(user.idUser)"
+              class="btn btn-danger"
+              style="margin-left: 10px"
+            >
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
