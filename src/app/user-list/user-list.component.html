@@ -6,10 +6,27 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">Type user</th>
-          <th scope="col">Name</th>
-          <th scope="col">First name</th>
-          <th scope="col">Email</th>
+          <th scope="col">
+            <!-- <a class="sort" (click)="sortBy('userType.typeUser')"
+              >Type user {{ sortIcon("userType.typeUser") }}</a
+            > -->
+            Type user
+          </th>
+          <th scope="col">
+            <a class="sort" (click)="sortBy('nameUser')"
+              >Name {{ sortIcon("nameUser") }}</a
+            >
+          </th>
+          <th scope="col">
+            <a class="sort" (click)="sortBy('firstNameUser')"
+              >First name {{ sortIcon("firstNameUser") }}</a
+            >
+          </th>
+          <th scope="col">
+            <a class="sort" (click)="sortBy('emailUser')"
+              >Email {{ sortIcon("emailUser") }}</a
+            >
+          </th>
           <th scope="col">Actions</th>
         </tr>
       </thead>

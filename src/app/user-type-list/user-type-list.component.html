@@ -6,8 +6,16 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Type user</th>
+          <th scope="col">
+            <a class="sort" (click)="sortBy('idTypeUser')"
+              >Id {{ sortIcon("idTypeUser") }}</a
+            >
+          </th>
+          <th scope="col">
+            <a class="sort" (click)="sortBy('typeUser')"
+              >Type user {{ sortIcon("typeUser") }}</a
+            >
+          </th>
           <th scope="col">Actions</th>
         </tr>
       </thead>
